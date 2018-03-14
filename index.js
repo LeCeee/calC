@@ -5,11 +5,12 @@ var screen = document.getElementById('screen');
 // 	screen.write(buttons.text);x
 // })
 var b = document.querySelectorAll('div.buttons');
-for (var i = 0; i < b.length; i++) {
-	b[i].onclick = function(){ console.log(this.textContent);
-		let text = this.textContent;
-		console.log(text);
-		console.log(this.innerHTML);
+for (let i = 0; i < b.length; i++) {
+	b[i].onclick = function(){
+		let text = this.querySelector('p').innerHTML;
+		console.log(this);
+		console.log(this.children[0].innerHTML);
+		console.log(this.querySelector('p').innerHTML);
 		if(text == 'erase'){
 			console.log('want to erase');
 			 screen.innerHTML = ' ';
