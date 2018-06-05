@@ -4,7 +4,7 @@ var screen = document.getElementById('screen');
 // buttons.addEventListener('click', function(){
 // 	screen.write(buttons.text);x
 // })
-screen.innerHTML="0";
+screen.value="0";
 var b = document.querySelectorAll('div.buttons');
 for (let i = 0; i < b.length; i++) {
 	b[i].onclick = function(){
@@ -15,20 +15,21 @@ for (let i = 0; i < b.length; i++) {
 		console.log(this.querySelector('p').innerHTML);
 		if(text == 'AC'){
 			console.log('want to erase');
-			 screen.innerHTML = "0";
+			 screen.value = "0";
 		}
 		else if(text == '='){
-			screen.innerHTML = eval(screen.innerHTML);
+			screen.value = eval(screen.value);
 		}
 		else{
-			if(screen.innerHTML=="0"){
-				screen.innerHTML = this.textContent;
+			if(screen.value=="0"){
+				screen.value = this.textContent;
 			}
 			else{
-				screen.innerHTML += this.textContent;
+				screen.value += this.textContent;
 			}
 		}
 		
 		
 	};
 }
+

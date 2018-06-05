@@ -2,6 +2,7 @@ body{
 	margin:0;
 	padding:0;
 	background-color:#f9f9f9;
+	user-select:none;
 }
 #container{
 	display:flex;
@@ -19,6 +20,7 @@ body{
 	transform:translateY(-50%) translateX(-50%);
 	transition:all 0.25s ease-out;
 	box-shadow:0px 8px 1px 4px rgba(51,50,62,0.65),0px 50px 50px 15px rgba(0,0,0,0.25);
+	overflow:hidden;
 }
 .maker{
 	color:#fbfbfb;
@@ -45,6 +47,8 @@ body{
 	color:#212121;
 	overflow:hidden;
 	border-radius:0.25rem;
+	cursor:default;
+	pointer-events:none;
 	box-shadow:inset 2px 5px 5px 1px rgba(0,0,0,0.5),inset -2px -2.5px 5px 1px rgba(255,255,255,0.75);
 }
 #keypad{
@@ -68,7 +72,6 @@ body{
 	width:50px;
 	align-content:center;
 	text-align:center;
-	box-shadow:0px 2px 2px 0px rgba(0,0,0,0.4);
 	border-radius:2.5px;
 	border-width:0px;
 	color:#fff;
@@ -79,6 +82,7 @@ body{
 	user-select:none;
 	transition:all 0.1s ease-in-out;
 	outline:none;
+	box-shadow:0px 5px 5px 0px rgba(0,0,0,0.3);
 
 /*width: 50px;
 	  height: 50px;
@@ -87,7 +91,8 @@ body{
 
 }
 .buttons:active{
-	box-shadow:0px 5px 5px 0px rgba(0,0,0,0.3);
+	bottom:-0.5%;
+	box-shadow:0px 2px 2px 0px rgba(0,0,0,0.4);
 }
 @font-face {
     font-family:Digital;
