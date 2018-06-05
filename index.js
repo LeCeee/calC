@@ -15,7 +15,7 @@ for (let i = 0; i < b.length; i++) {
 		console.log(this.querySelector('p').innerHTML);
 		if(text == 'AC'){
 			console.log('want to erase');
-			 screen.innerHTML = '0';
+			 screen.innerHTML = "0";
 		}
 		else if(text == '='){
 			screen.innerHTML = eval(screen.innerHTML);
